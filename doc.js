@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const display = document.getElementById("display");
   const buttons = document.querySelectorAll("button");
 
+  function clearDisplay() {
+    display.value = "";
+    console.log("Display vacío");
+  }
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const value = button.textContent;
@@ -15,11 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  function clearDisplay() {
-    display.value = "";
-    console.log("Display vacío");
-  }
 
   function appendValue(value) {
     display.value = display.value + value;
